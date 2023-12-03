@@ -1,8 +1,5 @@
-# Portfolio v5 ![dev](https://github.com/nuIIpointerexception/www.seekvisualartist.com/actions/workflows/dev.yml/badge.svg) ![master](https://github.com/nuIIpointerexception/www.seekvisualartist.com/actions/workflows/master.yml/badge.svg)
-
-This is the fifth iteration of my portfolio website. It is built with Next.js, React and Tailwind CSS.
-
-My goal was to try out a simplistic glass-morphism-like design and learn more about React and Next.js.
+# Portfolio v4
+This is the forth iteration of my portfolio website. It is built with Next.js, React and Tailwind CSS. I took inspiration from [nuIIpointerexception](https://github.com/nuIIpointerexception/www.seekvisualartist.com)
 
 Check it out [here](https://www.seekvisualartist.com/)
 
