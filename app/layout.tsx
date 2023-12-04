@@ -110,12 +110,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/manifest.json" />
-                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta name="msapplication-TileColor" content="#2196f3" />
                 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-                <meta name="theme-color" content="#ffffff" />
+                <meta name="theme-color" content="#141413" />
             </Head>
             <body
-                className={`${syne.className} scroll-smooth scrollbar-none scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
+                className={`${syne.className} scroll-smooth scrollbar-none scrollbar-track-[#0E1016] scrollbar-thumb-[#2196f3]`}
             >
                 {children}
             </body>
