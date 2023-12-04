@@ -1,5 +1,5 @@
 # Portfolio v4
-This is the forth iteration of my portfolio website. It is built with Next.js, React and Tailwind CSS. I took inspiration from [nuIIpointerexception](https://github.com/nuIIpointerexception/www.seekvisualartist.com)
+This is the forth iteration of my portfolio website. It is built with Next.js, React and Tailwind CSS. I took direct inspiration from [nuIIpointerexception](https://github.com/nuIIpointerexception/www.seekvisualartist.com), Basically copied him and added my own touch to it.
 
 <!-- 
 
