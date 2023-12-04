@@ -83,12 +83,12 @@ const Container: React.FC<ContainerProps> = ({
         }
     });
 
-    // const getGradientStyle = () => {
-    //     if (typeof angle === "number" && !isNaN(angle)) {
-    //         return `linear-gradient(${angle}deg, rgba(255, 255, 255, 0) 0%, ${color} 100%)`;
-    //     }
-    //     return color;
-    // };
+    const getGradientStyle = () => {
+        if (typeof angle === "number" && !isNaN(angle)) {
+            return `linear-gradient(${angle}deg, rgba(255, 255, 255, 0) 0%, ${color} 100%)`;
+        }
+        return color;
+    };
 
     const blurClasses = blur ? "backdrop-blur-[64px]" : "";
 
@@ -99,7 +99,7 @@ const Container: React.FC<ContainerProps> = ({
                 "--angle": typeof angle === "number" ? `${angle}deg` : angle,
                 "--width": typeof width === "number" ? `${width}px` : width,
                 "--height": typeof height === "number" ? `${height}px` : height,
-                // "--gradient": getGradientStyle(),
+                "--gradient": getGradientStyle(),
                 "--spotlight-color": spotlightColor,
                 "--accent-color": accentColor,
                 "--border-radius": `${borderRadius}px`,
