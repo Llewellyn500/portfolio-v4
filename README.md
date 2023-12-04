@@ -1,7 +1,7 @@
 # Portfolio v4
 This is the forth iteration of my portfolio website. It is built with Next.js, React and Tailwind CSS. I took inspiration from [nuIIpointerexception](https://github.com/nuIIpointerexception/www.seekvisualartist.com)
 
-Check it out [here](https://www.seekvisualartist.com/)
+<!-- 
 
 ---
 
@@ -15,7 +15,7 @@ Check it out [here](https://www.seekvisualartist.com/)
     <img src='./.github/assets/3.png' width='1817' alt="contact section">
 </div>
 
----
+--- -->
 
 ## Prerequisites
 
@@ -78,14 +78,3 @@ Personally I'd recommend [Vercel](https://vercel.com/) or [Netlify](https://www.
 - [Blobity](https://blobity.dev/) - Cursor Effects
 - [usehooks-ts](https://usehooks-ts.com/) - Custom React Hooks
 
----
-
-## License 📄
-
-This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Goodbye 👋
-
-If you liked this project, please consider giving it a ⭐!
