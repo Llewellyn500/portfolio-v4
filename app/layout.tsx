@@ -2,6 +2,7 @@ import "./globals.css";
 import React, { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Syne } from "next/font/google";
+import Head from "next/head";
 
 const syne = Syne({
     subsets: ["latin"],
@@ -10,17 +11,17 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://www.seekvisualartist.com/"),
+    // metadataBase: new URL(""),
     title: "Llewellyn Adonteng Paintsil",
     description:
-    "Hobby Designer and Software Engineer, currently at Neumann Kaffee Gruppe. Focused on immersive experiences, studying in Hamburg, Germany.",
+    "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
     generator: "Next.js",
     applicationName: "Llewellyn's Portfolio",
     keywords: [
-        "Seek Visual Artist",
-        "SeekVA",
-        "Seek Design",
-        "Seek Visuals",
+        "Llewellyn Adonteng Paintsil",
+        "Sleek style",
+        "Design",
+        "Visuals",
         "freelance",
         "developer",
         "freelance developer",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
         "creative developer",
         "creative engineer",
         "tech",
-        "germany",
+        "ghana",
         "software",
         "software developer",
         "portfolio",
@@ -46,17 +47,17 @@ export const metadata: Metadata = {
     ],
     colorScheme: "dark",
     openGraph: {
-        title: "Seek Visual Artist - Designer and Developer",
+        title: "Llewellyn Paintsil - Designer, Developer and Content Creator",
         description:
-      "Hobby Designer and Software Engineer, currently at Neumann Kaffee Gruppe. Focused on immersive experiences, studying in Hamburg, Germany.",
-        url: "https://www.seekvisualartist.com/",
-        siteName: "www.seekvisualartist.com",
+      "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
+        // url: "https://www.seekvisualartist.com/",
+        // siteName: "www.seekvisualartist.com",
         images: [
             {
                 url: "./public/metadata.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Seek Visual Artist - Designer and Developer",
+                alt: "Llewellyn Paintsil - Designer, Developer and Content Creator",
             },
         ],
         locale: "en-US",
@@ -64,11 +65,11 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Seek Visual Artist - Designer and Developer",
+        title: "Llewellyn Paintsil - Designer, Developer and Content Creator",
         description:
-      "Hobby Designer and Software Engineer, currently at Neumann Kaffee Gruppe. Focused on immersive experiences, studying in Hamburg, Germany.",
-        creator: "SeekVFX",
-        creatorId: "0000000000",
+      "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
+        creator: "Llewellyn Paintsil",
+        // creatorId: "0000000000",
         images: ["./public/metadata.jpg"],
     },
     robots: {
@@ -94,6 +95,25 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
+            <Head>
+                <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+                <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+                <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+                <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+                <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
+                <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+                <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
+                <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+                <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="manifest" href="/manifest.json" />
+                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+                <meta name="theme-color" content="#ffffff" />
+            </Head>
             <body
                 className={`${syne.className} scroll-smooth scrollbar-none scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
             >
