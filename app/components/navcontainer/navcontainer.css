@@ -1,0 +1,44 @@
+:root {
+    --width: 100%;
+    --height: 100%;
+    --gradient: #141413;
+    --border-radius: 0;
+    --top: 0;
+    --left: 0;
+    --is-hovered: 0;
+    --cursor-x: 0;
+    --cursor-y: 0;
+    --angle: 0;
+}
+
+
+.container {
+    width: var(--width);
+    height: var(--height);
+    background: var(--gradient);
+    border-radius: var(--border-radius);
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    transition: filter 0.3s ease-out, outline 0.3s ease-out;
+    filter: brightness(100%);
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .container {
+        bottom: -45px;
+        width: 101%;
+    }
+}
+
+.border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    mask-composite: exclude;
+    border: 2px solid transparent;
+    border-color: #ffffff20;
+    pointer-events: none;
+}

@@ -64,11 +64,11 @@ export default function Home() {
                 className="flex flex-col items-center justify-center bg-black"
             >
                 <Hero />
-                <About />
-                <Work />
-                <Tools />
-                <Contact />
-                <Footer />
+                {/* <About /> */}
+                {/* <Work /> */}
+                {/* <Tools /> */}
+                {/* <Contact /> */}
+                {/* <Footer /> */}
             </main>
         </>
     );

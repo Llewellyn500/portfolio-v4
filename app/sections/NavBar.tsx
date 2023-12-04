@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Container from "../components/container/Container";
+import NavContainer from "../components/navcontainer/NavContainer";
 import React from "react";
 
 const NavBar = () => {
@@ -16,7 +16,7 @@ const NavBar = () => {
 
     return (
         <nav className="nowrap fixed bottom-10 left-0 right-0 z-50 my-0 mx-auto flex items-center justify-center gap-1 px-1 py-1 text-[#2196f3] sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
-            <Container
+            <NavContainer
                 width="100%"
                 height="50px"
                 color="#141413"
@@ -70,7 +70,7 @@ const NavBar = () => {
                         </h4>
                     </Link>
                 </nav>
-            </Container>
+            </NavContainer>
         </nav>
     );
 };
