@@ -75,7 +75,7 @@ const PreLoader: React.FC = () => {
             style={{
                 height: "100vh",
                 width: "100%",
-                background: "#000000",
+                background: "#141413",
                 color: "#e5ebf2",
                 position: "fixed",
                 bottom: 0,

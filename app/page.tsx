@@ -1,6 +1,5 @@
 "use client";
 import React, {useState} from "react";
-import { ScrollerMotion } from "scroller-motion";
 import { useEffectOnce, useEventListener } from 'usehooks-ts';
 
 import PreLoader from "./components/other/PreLoader";
@@ -61,10 +60,6 @@ export default function Home() {
             <Blur />
             <Color />
             <NavBar />
-            {/*<ScrollerMotion // Weird, stuff happening with this
-                disabled={isMobile}
-                spring={{ mass: 1, stiffness:800, bounce: 300, damping: 100 }}
-            >*/}
             <main
                 className="flex flex-col items-center justify-center bg-black"
             >
@@ -72,11 +67,9 @@ export default function Home() {
                 <About />
                 <Work />
                 <Tools />
-                { /* <Blog /> TODO: Low Priority */ }
                 <Contact />
                 <Footer />
             </main>
-            {/*</ScrollerMotion>*/}
         </>
     );
 }
