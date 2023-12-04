@@ -51,7 +51,7 @@ type ContainerProps = {
     baseFrequency?: string;
     numOctaves?: number;
     // other
-    children: React.ReactNode;
+    children: React.ReactNode; 
 };
 
 const Container: React.FC<ContainerProps> = ({
@@ -60,8 +60,8 @@ const Container: React.FC<ContainerProps> = ({
     top = 0,
     left = 0,
     color,
-    spotlightColor = "rgba(255, 255, 255, 0.25)", // #ffffff just a bit of white
-    accentColor = "rgba(255, 255, 255, 1.0)", // #c673ff Amethyst
+    spotlightColor = "#2196f330",
+    accentColor = "#2196f3", 
     blur = true,
     borderRadius = 0,
     angle,
@@ -83,12 +83,12 @@ const Container: React.FC<ContainerProps> = ({
         }
     });
 
-    const getGradientStyle = () => {
-        if (typeof angle === "number" && !isNaN(angle)) {
-            return `linear-gradient(${angle}deg, rgba(255, 255, 255, 0) 0%, ${color} 100%)`;
-        }
-        return color;
-    };
+    // const getGradientStyle = () => {
+    //     if (typeof angle === "number" && !isNaN(angle)) {
+    //         return `linear-gradient(${angle}deg, rgba(255, 255, 255, 0) 0%, ${color} 100%)`;
+    //     }
+    //     return color;
+    // };
 
     const blurClasses = blur ? "backdrop-blur-[64px]" : "";
 
@@ -99,7 +99,7 @@ const Container: React.FC<ContainerProps> = ({
                 "--angle": typeof angle === "number" ? `${angle}deg` : angle,
                 "--width": typeof width === "number" ? `${width}px` : width,
                 "--height": typeof height === "number" ? `${height}px` : height,
-                "--gradient": getGradientStyle(),
+                // "--gradient": getGradientStyle(),
                 "--spotlight-color": spotlightColor,
                 "--accent-color": accentColor,
                 "--border-radius": `${borderRadius}px`,
