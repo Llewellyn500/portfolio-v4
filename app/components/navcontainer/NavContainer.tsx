@@ -26,10 +26,10 @@ type ContainerProps = {
     color: string;
     accentColor?: string;
     blur?: boolean;
-    border?: boolean; // TODO: !!
-    borderColor?: string; // TODO: !!
-    borderHighlight?: boolean; // TODO: !!
-    borderHighlightColor?: string; // TODO: !!
+    border?: boolean; 
+    borderColor?: string; 
+    borderHighlight?: boolean; 
+    borderHighlightColor?: string; 
     angle?: number;
     baseFrequency?: string;
     numOctaves?: number;
