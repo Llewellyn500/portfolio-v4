@@ -11,7 +11,7 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-    // metadataBase: new URL(""),
+    metadataBase: new URL("https://llewellyn-portfolio.vercel.app/"),
     title: "Llewellyn Adonteng Paintsil",
     description:
     "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
         title: "Llewellyn Paintsil - Designer, Developer and Content Creator",
         description:
       "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
-        // url: "https://www.seekvisualartist.com/",
-        // siteName: "www.seekvisualartist.com",
+        url: "https://llewellyn-portfolio.vercel.app/",
+        siteName: "Llewellyn Paintsil Portfolio",
         images: [
             {
                 url: "./public/metadata.jpg",
