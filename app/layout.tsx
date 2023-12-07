@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         siteName: "Llewellyn Paintsil Portfolio",
         images: [
             {
-                url: "/public/metadata.jpg",
+                url: "/metadata.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Llewellyn Paintsil - Designer, Developer and Content Creator",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
       "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
         creator: "Llewellyn Paintsil",
         // creatorId: "0000000000",
-        images: ["/public/metadata.jpg"],
+        images: ["/metadata.jpg"],
     },
     robots: {
         index: true,
