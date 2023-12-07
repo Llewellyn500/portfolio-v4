@@ -64,7 +64,7 @@ export default function Home() {
                 className="flex flex-col items-center justify-center bg-black"
             >
                 <Hero />
-                {/* <About /> */}
+                <About />
                 {/* <Work /> */}
                 {/* <Tools /> */}
                 {/* <Contact /> */}
