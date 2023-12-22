@@ -10,9 +10,9 @@ const About = () => {
             className="relative z-10 w-full items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-16 pb-36 md:pt-20 md:pb-44 lg:pt-20 lg:pb-56"
             id="about"
         >
-            <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1212.8px]">
+            {/* <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1212.8px]">
                 <Image src={"/logo.svg"} alt={"logo"} width={"100"} height={"100"} className="mb-10"/>
-            </div>
+            </div> */}
             <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1212.8px]">
                 <AnimatedTitle
                     text={"ABOUT ME"}
