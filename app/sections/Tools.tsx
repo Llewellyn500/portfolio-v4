@@ -4,7 +4,7 @@ import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";
 import {
     SiAdobephotoshop, SiFigma, SiCss3, SiGit, SiHtml5, SiVisualstudiocode, SiGnubash, SiZorin, SiWindows10,
-    SiGithub, SiJavascript, SiNextdotjs, SiReact, SiBun,
+    SiGithub, SiJavascript, SiNextdotjs, SiReact, SiBun, SiAndroid, SiNodedotjs, SiPhp,
 } from "react-icons/si";
 import AnimatedTools from "../animations/AnimatedTools.tsx";
 
@@ -29,8 +29,8 @@ const Tools = () => {
                         <AnimatedBody delay={0.1} text="Design" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.1} stepSize={0.1} iconSize={50}>
-                                <SiAdobephotoshop size={50}/>
-                                <SiFigma size={50}/>
+                                <SiAdobephotoshop size={50} title={"Adobe Photoshop"}/>
+                                <SiFigma size={50} title={"Figma"}/>
                             </AnimatedTools>
                         </div>
                     </div>
@@ -38,11 +38,21 @@ const Tools = () => {
                         <AnimatedBody delay={0.2} text="Frontend Development" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.2} stepSize={0.1} iconSize={50}>
-                                <SiHtml5 size={50}/>
-                                <SiCss3 size={50}/>
-                                <SiJavascript size={50}/>
-                                <SiReact size={50}/>
-                                <SiNextdotjs size={50}/>
+                                <SiHtml5 size={50} title={"HTML"}/>
+                                <SiCss3 size={50} title={"CSS3"}/>
+                                <SiJavascript size={50} title={"JavaScript"}/>
+                                <SiReact size={50} title={"React"}/>
+                                <SiNextdotjs size={50} title={"Next.js"}/>
+                            </AnimatedTools>
+                        </div>
+                    </div>
+                    <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-bold leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[40px] md:leading-relaxed lg:mb-16 lg:w-[50%]">
+                        <AnimatedBody delay={0.2} text="Backend Development" />
+                        <div>
+                            <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.2} stepSize={0.1} iconSize={50}>
+                                <SiPhp size={50} title={"PHP"}/>
+                                <SiNodedotjs size={50} title={"Node.js"}/>
+                                <SiBun size={50} title={"Bun"}/>
                             </AnimatedTools>
                         </div>
                     </div>
@@ -50,11 +60,10 @@ const Tools = () => {
                         <AnimatedBody delay={0.4} text="Other" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.4} stepSize={0.1} iconSize={50}>
-                                <SiGithub size={50}/>
-                                <SiGit size={50}/>
-                                <SiVisualstudiocode size={50}/>
-                                <SiGnubash size={50}/>
-                                <SiBun size={50}/>
+                                <SiGithub size={50} title={"GitHub"}/>
+                                <SiGit size={50} title={"Git"}/>
+                                <SiVisualstudiocode size={50} title={"VS Code"}/>
+                                <SiGnubash size={50} title={"Bash Scripting"}/>
                             </AnimatedTools>
                         </div>
                     </div>
@@ -62,9 +71,9 @@ const Tools = () => {
                         <AnimatedBody delay={0.4} text="OS" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.4} stepSize={0.1} iconSize={50}>
-                                <SiZorin size={50}/>
-                                <SiWindows10 size={50}/>
-                              
+                                <SiZorin size={50} title={"Zorin OS"}/>
+                                <SiWindows10 size={50} title={"Windows"}/>
+                                <SiAndroid size={50} title={"Android"}/>
                             </AnimatedTools>
                         </div>
                     </div>
