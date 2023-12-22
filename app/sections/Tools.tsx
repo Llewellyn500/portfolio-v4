@@ -3,8 +3,8 @@ import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";
 import {
-    SiAdobephotoshop, SiFigma, SiCss3, SiGit, SiHtml5, SiVisualstudiocode,
-    SiGithub, SiJavascript, SiNextdotjs, SiReact,
+    SiAdobephotoshop, SiFigma, SiCss3, SiGit, SiHtml5, SiVisualstudiocode, SiGnubash, SiZorin, SiWindows10,
+    SiGithub, SiJavascript, SiNextdotjs, SiReact, SiBun,
 } from "react-icons/si";
 import AnimatedTools from "../animations/AnimatedTools.tsx";
 
@@ -35,7 +35,7 @@ const Tools = () => {
                         </div>
                     </div>
                     <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-bold leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[40px] md:leading-relaxed lg:mb-16 lg:w-[50%]">
-                        <AnimatedBody delay={0.2} text="Frontend" />
+                        <AnimatedBody delay={0.2} text="Frontend Development" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.2} stepSize={0.1} iconSize={50}>
                                 <SiHtml5 size={50}/>
@@ -53,6 +53,18 @@ const Tools = () => {
                                 <SiGithub size={50}/>
                                 <SiGit size={50}/>
                                 <SiVisualstudiocode size={50}/>
+                                <SiGnubash size={50}/>
+                                <SiBun size={50}/>
+                            </AnimatedTools>
+                        </div>
+                    </div>
+                    <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-bold leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[40px] md:leading-relaxed lg:mb-16 lg:w-[50%]">
+                        <AnimatedBody delay={0.4} text="OS" />
+                        <div>
+                            <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.4} stepSize={0.1} iconSize={50}>
+                                <SiZorin size={50}/>
+                                <SiWindows10 size={50}/>
+                              
                             </AnimatedTools>
                         </div>
                     </div>

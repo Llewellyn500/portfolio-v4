@@ -64,7 +64,7 @@ const Animated: React.FC<AnimatedProps> = ({
                 return (
                     <motion.div
                         key={index}
-                        whileHover={{ scale: 1.1, color: "#ff5733" }} // Modify the color when hovering
+                        whileHover={{ scale: 1.1, color: "#2196f3" }} // Modify the color when hovering
                         whileTap={{ scale: 0.9 }}
                         style={{ width: iconSize, height: iconSize }}
                         data-blobity
