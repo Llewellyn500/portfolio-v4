@@ -69,6 +69,17 @@ const NavBar = () => {
               CONTACT
                         </h4>
                     </Link>
+
+                    <Link
+                        href="https://llewellyn500.github.io/CV/"
+                        data-blobity-magnetic="false"
+                        aria-label="Open CV"
+                        target="_blank"
+                    >
+                        <h4 className="py-2 px-2 text-[12px] sm:px-4 sm:text-[14px] md:py-1 md:px-4">
+              CV
+                        </h4>
+                    </Link>
                 </nav>
             </NavContainer>
         </nav>
