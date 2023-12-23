@@ -67,8 +67,8 @@ export default function Home() {
                 <About />
                 <Tools />
                 <Work />
-                {/* <Contact /> */}
-                {/* <Footer /> */}
+                <Contact />
+                <Footer />
             </main>
         </>
     );
