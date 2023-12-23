@@ -11,7 +11,7 @@ import React from "react";
 const Contact = () => {
     return (
         <motion.section
-            className="relative z-10 flex h-[90vh] w-full items-center justify-center overflow-hidden py-16 md:h-[90vh] md:py-20 lg:h-[90vh] lg:pt-0 lg:pb-28"
+            className="relative z-10 flex h-[85vh] w-full items-center justify-center overflow-hidden py-16 md:h-[80vh] md:py-20 lg:h-[90vh] lg:pt-0 lg:pb-28"
             id="contact"
             initial="initial"
             animate="animate"
@@ -19,13 +19,15 @@ const Contact = () => {
             <ContactBackground />
             <div className="mx-auto  flex w-[90%] flex-col items-center justify-center pt-10 md:pt-0">
                 <div
-                    className={`flex flex-col items-start justify-center ${spaceGrotesk.className} relative w-full sm:items-center lg:max-w-[1440px] `}
+                    className={`flex flex-col items-start justify-center ${spaceGrotesk.className} relative w-full lg:max-w-[1440px] `}
                 >
-                    <AnimatedWords
-                        title={"contact"}
-                        style={
-                            "flex max-w-[400px] flex-col items-start text-left text-[100px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[150px] md:text-[150px] lg:text-center lg:text-[120px] xl:text-[450px]"
+                    <AnimatedTitle
+                        text={"CONTACT"}
+                        className={
+                            "flex max-w-[400px] flex-col items-start text-left text-[100px] font-extrabold leading-[1em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:justify-center sm:text-[120px] md:text-[150px] lg:text-center lg:text-[120px] xl:text-[450px]"
                         }
+                        wordSpace={"100px"}
+                        charSpace={"0.01em"}
                     />
                 </div>
 
