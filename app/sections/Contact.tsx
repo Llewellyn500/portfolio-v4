@@ -17,17 +17,16 @@ const Contact = () => {
             animate="animate"
         >
             <ContactBackground />
-            <div className="mx-auto  flex w-[90%] flex-col items-center justify-center pt-10 md:pt-0">
-                <div
-                    className={`flex flex-col items-start justify-center ${spaceGrotesk.className} relative w-full sm:items-center lg:max-w-[1440px] `}
-                >
-                    <AnimatedWords
-                        title={"contact"}
-                        style={
-                            "flex max-w-[400px] flex-col items-start text-left text-[100px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[150px] md:text-[150px] lg:text-center lg:text-[120px] xl:text-[450px]"
-                        }
-                    />
-                </div>
+            <div className="mx-auto flex w-[90%] flex-col items-center justify-center pt-10 md:pt-0">
+                <AnimatedTitle
+                    text={"CONTACT"}
+                    className={
+                        "mb-10 text-left text-[5.4rem] font-bold leading-[0.9em] tracking-tighter text-[#e4ded7] sm:text-[45px] md:mb-16 md:text-[10rem] lg:text-[20rem]"
+                    }
+                    wordSpace={"mr-[14px]"}
+                    charSpace={"mr-[0.001em]"}
+                />
+                
 
                 <div className="mt-20 flex w-full flex-col items-end justify-center gap-16 sm:mt-32 sm:gap-12 md:mt-40 md:flex-row md:items-start md:justify-between lg:mt-12 lg:max-w-[1440px]">
                     <div className=" flex w-[350px] max-w-[90%] flex-col items-end text-right text-[14px] font-semibold uppercase text-[#e4ded7] sm:w-[350px] sm:text-[14px] md:w-[310px] md:items-start md:text-left md:text-[16px] lg:w-[420px] lg:text-[16px]">
