@@ -7,6 +7,8 @@ import {
     SiRust,
     SiTailwindcss,
     SiTypescript,
+    SiVisualstudiocode,
+    SiVsco,
     SiZig
 } from "react-icons/si";
 import {IconType} from "react-icons";
@@ -40,6 +42,19 @@ export const projects = [
     },
     {
         id: 1,
+        name: "Legendary Dark",
+        description:
+            "My very own vs code theme. I've been using it for a while now and I'm very happy with it.",
+        technologies: [SiVisualstudiocode],
+        techNames: ["VS Code"],
+        techLinks: ["https://code.visualstudio.com/"],
+        github: "https://github.com/Llewellyn500/Legendary-Dark",
+        demo: "https://marketplace.visualstudio.com/items?itemName=LlewellynPaintsil.legendary-dark",
+        image: "/projects/legendary-dark.webp",
+        available: true,
+    },
+    {
+        id: 2,
         name: "Coming Soon",
         description:
             "I've got some couple of projects i'm currently working on. I'll update this section as soon as I'm done.",
@@ -48,7 +63,7 @@ export const projects = [
         techLinks: [],
         github: "",
         demo: "",
-        image: "/projects/construction-2.webp",
+        image: "/projects/construction.webp",
         available: false,
     },
 ];
