@@ -113,6 +113,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <meta name="msapplication-TileColor" content="#2196f3" />
                 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
                 <meta name="theme-color" content="#141413" />
+                
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-03MX5ZPMJ6"></script>
+                <script>
+                    {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-03MX5ZPMJ6');
+                    `}
+                </script>
             </Head>
             <body
                 className={`${syne.className} scroll-smooth scrollbar-none scrollbar-track-[#0E1016] scrollbar-thumb-[#2196f3]`}
