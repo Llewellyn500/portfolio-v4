@@ -1,8 +1,10 @@
 import {
     SiCplusplus,
+    SiCss3,
     SiFramer,
-    SiGithub, SiNeovim,
+    SiGithub, SiGnubash, SiHtml5, SiNeovim,
     SiNextdotjs,
+    SiPython,
     SiReact,
     SiRust,
     SiTailwindcss,
@@ -55,6 +57,32 @@ export const projects = [
     },
     {
         id: 2,
+        name: "Rachel Auto",
+        description:
+            "This is a tool to simplify some tasks done on the Rachel-pi",
+        technologies: [SiGnubash, SiPython],
+        techNames: ["Shell", "Python"],
+        techLinks: ["https://www.gnu.org/software/bash/", "https://www.python.org/"],
+        github: "https://github.com/ComDevNet/rachel-auto",
+        demo: "https://github.com/ComDevNet/rachel-auto",
+        image: "/projects/rachel-auto.webp",
+        available: true,
+    },
+    {
+        id: 3,
+        name: "Rachel-Pi Log Converter",
+        description:
+            "A web application that allows you to convert the logs from the Rachel-Pi into a more readable format.",
+        technologies: [SiHtml5, SiCss3, SiPython],
+        techNames: ["HTML", "CSS", "Python"],
+        techLinks: ["https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics", "https://developer.mozilla.org/en-US/docs/Web/CSS", "https://www.python.org/"],
+        github: "https://rachel-pi-log-converter.azurewebsites.net/",
+        demo: "https://github.com/Llewellyn500/RACHEL-Pi-log-file-converter",
+        image: "/projects/rachel-pi-log-converter.webp",
+        available: true,
+    },
+    {
+        id: 4,
         name: "Coming Soon",
         description:
             "I've got some couple of projects i'm currently working on. I'll update this section as soon as I'm done.",
