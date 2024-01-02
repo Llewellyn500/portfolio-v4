@@ -26,7 +26,10 @@ const About = () => {
                 <div className="mx-auto flex w-[100%] flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
                     <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-medium  leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[20px] md:leading-relaxed lg:mb-16  lg:max-w-[90%] lg:text-[24px] ">
                         <AnimatedBody text="I'm your friendly neighborhood Llewellyn Adonteng Paintsil." />
-                        <AnimatedBody delay={0.1} text="I've run out of creativity so I'll write it later." />
+                        <AnimatedBody delay={0.1} text="A student in KNUST studying Computer Science. I've had this passion for coding and design since I was just a kid, and I've been doing it ever since. Scratch that, I've been doing it since Covid-19 hit the world. Even though a lot of people died, It was part of the best times in my life. I had time to do what i want and follow my passion." />
+                        <AnimatedBody delay={0.2} text="I started a youtube channel called LP Teach a year before covid started, it was doing well but then the change in YouTube management came and it affected the channel greatly, the channel got permanently banned and i had to start over from scratch with my 2 new channels: LAP – Tutorials and Arclapain, where I share my tech knowledge with the world and play games." />
+                        <AnimatedBody delay={0.3} text="Thats something small about me, I'm open to collaborating on any project and videos you got, just hit me up." />
+                        {/* <AnimatedBody delay={0.4} text="I've run out of creativity so I'll write it later." /> */}
                         {/* <AnimatedBody delay={0.1} text="By day, I'm a coding wizard crafting software that's both beautiful and user-friendly. By night, I'm a YouTube demigod, juggling two channels; LAP – Tutorials and Arclapain, where I share my tech knowledge with the world and play games." />
                         <AnimatedBody delay={0.2} text="Think of me as the Bob Ross of software development, except instead of fluffy clouds and happy trees, I paint digital landscapes with pixels and lines of code. And instead of a soothing voice, you get my infectious enthusiasm for all things tech." />
 
