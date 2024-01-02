@@ -29,8 +29,8 @@ const Tools = () => {
                         <AnimatedBody delay={0.1} text="Design" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.1} stepSize={0.1} iconSize={50}>
-                                <SiAdobephotoshop size={50} title={"Adobe Photoshop"}/>
-                                <SiFigma size={50} title={"Figma"}/>
+                                <SiAdobephotoshop size={50} data-blobity-tooltip={"Adobe Photoshop"}/>
+                                <SiFigma size={50} data-blobity-tooltip={"Figma"}/>
                             </AnimatedTools>
                         </div>
                     </div>
@@ -38,11 +38,11 @@ const Tools = () => {
                         <AnimatedBody delay={0.2} text="Frontend Development" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.2} stepSize={0.1} iconSize={50}>
-                                <SiHtml5 size={50} title={"HTML"}/>
-                                <SiCss3 size={50} title={"CSS3"}/>
-                                <SiJavascript size={50} title={"JavaScript"}/>
-                                <SiReact size={50} title={"React"}/>
-                                <SiNextdotjs size={50} title={"Next.js"}/>
+                                <SiHtml5 size={50} data-blobity-tooltip={"HTML"}/>
+                                <SiCss3 size={50} data-blobity-tooltip={"CSS3"}/>
+                                <SiJavascript size={50} data-blobity-tooltip={"JavaScript"}/>
+                                <SiReact size={50} data-blobity-tooltip={"React"}/>
+                                <SiNextdotjs size={50} data-blobity-tooltip={"Next.js"}/>
                             </AnimatedTools>
                         </div>
                     </div>
@@ -50,9 +50,9 @@ const Tools = () => {
                         <AnimatedBody delay={0.2} text="Backend Development" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.2} stepSize={0.1} iconSize={50}>
-                                <SiPhp size={50} title={"PHP"}/>
-                                <SiNodedotjs size={50} title={"Node.js"}/>
-                                <SiBun size={50} title={"Bun"}/>
+                                <SiPhp size={50} data-blobity-tooltip={"PHP"}/>
+                                <SiNodedotjs size={50} data-blobity-tooltip={"Node.js"}/>
+                                <SiBun size={50} data-blobity-tooltip={"Bun"}/>
                             </AnimatedTools>
                         </div>
                     </div>
@@ -60,10 +60,10 @@ const Tools = () => {
                         <AnimatedBody delay={0.4} text="Other" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.4} stepSize={0.1} iconSize={50}>
-                                <SiGithub size={50} title={"GitHub"}/>
-                                <SiGit size={50} title={"Git"}/>
-                                <SiVisualstudiocode size={50} title={"VS Code"}/>
-                                <SiGnubash size={50} title={"Bash Scripting"}/>
+                                <SiGithub size={50} data-blobity-tooltip={"GitHub"}/>
+                                <SiGit size={50} data-blobity-tooltip={"Git"}/>
+                                <SiVisualstudiocode size={50} data-blobity-tooltip={"VS Code"}/>
+                                <SiGnubash size={50} data-blobity-tooltip={"Bash Scripting"}/>
                             </AnimatedTools>
                         </div>
                     </div>
@@ -71,9 +71,9 @@ const Tools = () => {
                         <AnimatedBody delay={0.4} text="OS" />
                         <div>
                             <AnimatedTools className="grid grid-cols-5 gap-4" delay={0.4} stepSize={0.1} iconSize={50}>
-                                <SiZorin size={50} title={"Zorin OS"}/>
-                                <SiWindows10 size={50} title={"Windows"}/>
-                                <SiAndroid size={50} title={"Android"}/>
+                                <SiZorin size={50} data-blobity-tooltip={"Zorin OS"}/>
+                                <SiWindows10 size={50} data-blobity-tooltip={"Windows"}/>
+                                <SiAndroid size={50} data-blobity-tooltip={"Android"}/>
                             </AnimatedTools>
                         </div>
                     </div>
