@@ -1,6 +1,6 @@
 import "./globals.css";
 import React, { ReactNode } from "react";
-import type { Metadata } from "next";
+import type Metadata  from "next";
 import { Syne } from "next/font/google";
 import Head from "next/head";
 
@@ -45,7 +45,6 @@ export const metadata: Metadata = {
         "software developer portfolio",
         "frontend engineer portfolio",
     ],
-    colorScheme: "dark",
     openGraph: {
         title: "Llewellyn Paintsil - Designer, Developer and Content Creator",
         description:
@@ -69,7 +68,6 @@ export const metadata: Metadata = {
         description:
       "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
         creator: "Llewellyn Paintsil",
-        // creatorId: "0000000000",
         images: ["/metadata.jpg"],
     },
     robots: {

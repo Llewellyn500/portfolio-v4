@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const NotFound = () => {
     return (
-        <div className="flex h-[100vh] flex-col items-center justify-center gap-5 bg-[#0E1016] text-[#e4ded7]">
+        <div className="flex h-[100vh] flex-col items-center justify-center gap-5 bg-[#0E1016] text-[#e4ded7] text-center">
             <Image
                 src="/404.gif"
                 alt="Funny Meme"

@@ -43,6 +43,8 @@
 html,
 body {
   overscroll-behavior: none;
+  scrollbar-width: none;
+  scrollbar-color: #2196f3 #0E0F16;
 }
 
 body {

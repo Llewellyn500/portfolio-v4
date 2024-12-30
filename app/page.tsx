@@ -2,22 +2,23 @@
 import React, {useState} from "react";
 import { useEffectOnce, useEventListener } from 'usehooks-ts';
 
-import PreLoader from "./components/other/PreLoader";
-import useBlobity from "./components/blobity/useBlobity";
+import PreLoader from "./components/other/PreLoader.tsx";
+import useBlobity from "./components/blobity/useBlobity.ts";
 
-import Blur from "./components/overlay/Blur";
-import Color from "./components/overlay/Color";
+import Blur from "./components/overlay/Blur.tsx";
+import Color from "./components/overlay/Color.tsx";
 
-import NavBar from "./sections/NavBar";
-import Hero from "./sections/Hero";
-import About from "./sections/About";
-import Work from "./sections/Work";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
+import NavBar from "./sections/NavBar.tsx";
+import Hero from "./sections/Hero.tsx";
+import About from "./sections/About.tsx";
+import Work from "./sections/Work.tsx";
+import Contact from "./sections/Contact.tsx";
 import Tools from "./sections/Tools.tsx";
+import Footer from "./sections/Footer.tsx";
 
 export default function Home() {
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isMobile, setIsMobile] = useState(false);
 
     useEffectOnce(() => {

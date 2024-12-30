@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { spaceGrotesk } from "../fonts/spaceGrotesk";
 import "../animations/animate.css";
-import AnimatedBody from "../animations/AnimatedBody";
-import AnimatedTitle from "../animations/AnimatedTitle";
-import AnimatedWords from "../animations/AnimatedWords";
+import AnimatedBody from "../animations/AnimatedBody.tsx";
+import AnimatedTitle from "../animations/AnimatedTitle.tsx";
 import { motion } from "framer-motion";
-import ContactBackground from "../components/background/ContactBackground";
+import ContactBackground from "../components/background/ContactBackground.tsx";
 import React from "react";
 
 const Contact = () => {
@@ -78,12 +76,12 @@ const Contact = () => {
                             />
                         </Link>
                         <Link
-                            href="https://www.youtube.com/@lap-tutorials"
+                            href="https://socialize-llewellyn.vercel.app/"
                             target="_blank"
-                            aria-label="View Youtube Channel"
+                            aria-label="View Social Links"
                         >
                             <AnimatedTitle
-                                text={"YOUTUBE"}
+                                text={"SOCIALIZE"}
                                 className={
                                     "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
                                 }

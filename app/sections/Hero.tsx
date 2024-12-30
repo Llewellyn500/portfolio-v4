@@ -1,7 +1,7 @@
-import { spaceGrotesk } from "../fonts/spaceGrotesk";
+import { spaceGrotesk } from "../fonts/spaceGrotesk.ts";
 import { motion } from "framer-motion";
-import Logo from "../components/svg/Logo";
-import HeroBackground from "../components/background/HeroBackground";
+import Logo from "../components/svg/Logo.tsx";
+import HeroBackground from "../components/background/HeroBackground.tsx";
 import React from "react";
 
 const Hero = () => {
