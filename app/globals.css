@@ -50,3 +50,14 @@ body {
 body {
   overflow-y: hidden;
 }
+
+/* Text selection */
+::selection {
+  background: #2a313490; 
+  color: white; 
+}
+
+::-moz-selection {
+  background: #2a313490;
+  color: white;
+}
