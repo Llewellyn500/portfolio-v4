@@ -13,7 +13,7 @@ const Contact = () => {
             id="contact"
             initial="initial"
             animate="animate"
-        >
+        > 
             <ContactBackground />
             <div className="mx-auto flex w-[90%] flex-col items-center justify-center pt-10 md:pt-0">
                 <AnimatedTitle

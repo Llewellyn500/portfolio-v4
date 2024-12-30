@@ -1,6 +1,6 @@
 import "./globals.css";
 import React, { ReactNode } from "react";
-import type Metadata  from "next";
+import { Metadata } from "next";
 import { Syne } from "next/font/google";
 import Head from "next/head";
 
