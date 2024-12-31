@@ -15,7 +15,6 @@ import {
     SiGithub,
     SiJavascript,
     SiNextdotjs,
-    SiReact,
     SiBun,
     SiAndroid,
     SiNodedotjs,
@@ -73,7 +72,7 @@ const Tools = () => {
                         <AnimatedBody delay={0.2} text="Frontend Development" />
                         <div>
                             <AnimatedTools
-                                className="grid grid-cols-6 gap-4"
+                                className="grid grid-cols-5 gap-4"
                                 delay={0.2}
                                 stepSize={0.1}
                                 iconSize={50}
@@ -82,7 +81,6 @@ const Tools = () => {
                                 <SiCss3 size={50} data-blobity-tooltip={"CSS3"} />
                                 <SiJavascript size={50} data-blobity-tooltip={"JavaScript"} />
                                 <SiTypescript size={50} data-blobity-tooltip={"TypeScript"} />
-                                <SiReact size={50} data-blobity-tooltip={"React"} />
                                 <SiNextdotjs size={50} data-blobity-tooltip={"Next.js"} />
                             </AnimatedTools>
                         </div>
