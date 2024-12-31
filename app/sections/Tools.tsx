@@ -31,7 +31,6 @@ import { BiLogoVisualStudio } from "react-icons/bi";
 import { FaWindows } from "react-icons/fa";
 import { RiMixtralFill } from "react-icons/ri";
 
-
 const Tools = () => {
     return (
         <section
