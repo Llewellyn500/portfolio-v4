@@ -9,17 +9,16 @@ import {
     SiRust,
     SiTailwindcss,
     SiTypescript,
-    SiVisualstudiocode,
     SiVsco,
     SiZig
 } from "react-icons/si";
-import {IconType} from "react-icons";
+import { BiLogoVisualStudio } from "react-icons/bi";
 
 export type ProjectProps = {
   id: number;
   name: string;
   description: string;
-  technologies: IconType[];
+  technologies: any[];
   techNames: string[];
   techLinks: string[];
   github: string;
@@ -47,7 +46,7 @@ export const projects = [
         name: "Legendary Dark",
         description:
             "My very own vs code theme. I've been using it for a while now and I'm very happy with it.",
-        technologies: [SiVisualstudiocode],
+        technologies: [BiLogoVisualStudio],
         techNames: ["VS Code"],
         techLinks: ["https://code.visualstudio.com/"],
         github: "https://github.com/Llewellyn500/Legendary-Dark",

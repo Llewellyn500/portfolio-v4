@@ -1,10 +1,10 @@
-import { ProjectProps } from "./projectDetails";
+import { ProjectProps } from "./projectDetails.js";
 import Link from "next/link";
 import Image from "next/image";
-import AnimatedTitle from "../../animations/AnimatedTitle";
-import AnimatedBody from "../../animations/AnimatedBody";
+import AnimatedTitle from "../../animations/AnimatedTitle.tsx";
+import AnimatedBody from "../../animations/AnimatedBody.tsx";
 import { motion } from "framer-motion";
-import Container from "../container/Container";
+import Container from "../container/Container.tsx";
 import React from "react";
 import {SiGithub} from "react-icons/si";
 import {BsLink45Deg} from "react-icons/bs";
