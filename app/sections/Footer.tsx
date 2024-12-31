@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import AnimatedBody from "../animations/AnimatedBody";
+import AnimatedBody from "../animations/AnimatedBody.tsx";
 import React from "react";
 
 const Footer = () => {
@@ -16,14 +16,14 @@ const Footer = () => {
                     className={"m-0 p-0"}
                 />
                 <div className="flex flex-col sm:flex-row  sm:gap-1 md:gap-2">
-                    <AnimatedBody text={"Made with love by"} className={"m-0 p-0"} />
+                    <AnimatedBody text={"Made In"} className={"m-0 p-0"} />
                     <Link
-                        href="https://github.com/Llewellyn500"
+                        href="https://www.google.com/search?q=ghana&oq=ghana&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YsQMYgAQyDQgCEAAYgwEYsQMYgAQyBggDEEUYPTIGCAQQRRg9MgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEIMTA2OGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8"
                         target="_blank"
-                        aria-label="Llewellyn Paintsil's GitHub Profile"
+                        aria-label="Ghana"
                     >
                         <span className="underline underline-offset-2 hover:no-underline">
-                            <AnimatedBody text={"Llewellyn Paintsil"} className={"m-0 p-0"} />
+                            <AnimatedBody text={"Ghana"} className={"m-0 p-0"} />
                         </span>{" "}
                     </Link>
                 </div>

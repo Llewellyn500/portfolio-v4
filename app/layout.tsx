@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { Syne } from "next/font/google";
 import Head from "next/head";
 
+
 const syne = Syne({
     subsets: ["latin"],
     display: "block",
@@ -108,7 +109,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/manifest.json" />
-                <meta name="msapplication-TileColor" content="#2196f3" />
+                <meta name="msapplication-TileColor" content="#8a2be2" />
                 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
                 <meta name="theme-color" content="#141413" />
                 

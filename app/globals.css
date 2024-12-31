@@ -53,11 +53,11 @@ body {
 
 /* Text selection */
 ::selection {
-  background: #2a313490; 
+  background: #2a3134b0; 
   color: white; 
 }
 
 ::-moz-selection {
-  background: #2a313490;
+  background: #2a3134b0;
   color: white;
 }
