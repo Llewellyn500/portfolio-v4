@@ -1,4 +1,4 @@
-import { spaceGrotesk } from "../fonts/spaceGrotesk.ts";
+import { spaceGrotesk } from "../../public/fonts/spaceGrotesk.ts";
 import { motion } from "framer-motion";
 import Logo from "../components/svg/Logo.tsx";
 import HeroBackground from "../components/background/HeroBackground.tsx";

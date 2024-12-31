@@ -15,7 +15,6 @@ import Work from "./sections/Work.tsx";
 import Contact from "./sections/Contact.tsx";
 import Tools from "./sections/Tools.tsx";
 import Footer from "./sections/Footer.tsx";
-import ScrollToTop from "./components/other/ScrollToTop";
 
 export default function Home() {
 
