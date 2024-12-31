@@ -1,6 +1,7 @@
 import {
     SiGnubash,
     SiNextdotjs,
+    SiNodedotjs,
     SiPython,
     SiTailwindcss,
     SiTypescript,
@@ -79,7 +80,7 @@ export const projects = [
         technologies: [
             SiNextdotjs,
             SiTypescript,
-            SiNextdotjs,
+            SiNodedotjs,
             SiGnubash,
             SiTailwindcss,
         ],
@@ -101,7 +102,7 @@ export const projects = [
         name: "OC4D",
         description:
       "A collection of resources tailored to help students in the rural areas of Ghana",
-        technologies: [SiNextdotjs, SiTypescript, SiNextdotjs, SiTailwindcss],
+        technologies: [SiNextdotjs, SiTypescript, SiNodedotjs, SiTailwindcss],
         techNames: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS"],
         techLinks: [
             "https://nextjs.org/",
