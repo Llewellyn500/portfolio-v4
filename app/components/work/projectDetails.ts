@@ -26,6 +26,37 @@ export type ProjectProps = {
 export const projects = [
     {
         id: 0,
+        name: "Asɛm Bi",
+        description:
+      "Create and share beautiful letters with QR codes",
+        technologies: [SiTypescript, SiNextdotjs, SiTailwindcss],
+        techNames: ["TypeScript", "Next.js", "Tailwind CSS"],
+        techLinks: [
+            "https://www.typescriptlang.org/",
+            "https://nextjs.org/",
+            "https://tailwindcss.com/",
+        ],
+        github: "",
+        demo: "https://asem-bi.vercel.app/",
+        image: "/projects/asem-bi.webp",
+        available: true,
+        showLink: true,
+    },
+    {
+        id: 1,
+        name: "Legendary Dark",
+        description:
+        "My very own vs code theme. I've been using it for a while now and I'm very happy with it.",
+        technologies: [BiLogoVisualStudio],
+        techNames: ["VS Code"],
+        techLinks: ["https://code.visualstudio.com/"],
+        github: "https://github.com/Llewellyn500/Legendary-Dark",
+        demo: "https://marketplace.visualstudio.com/items?itemName=LlewellynPaintsil.legendary-dark",
+        image: "/projects/legendary-dark.webp",
+        available: true,
+    },
+    {
+        id: 2,
         name: "MediWhisper",
         description:
       "Skip the wait. AI-powered pre-diagnosis and direct doctor consultations streamline your healthcare journey.",
@@ -42,35 +73,6 @@ export const projects = [
         available: true,
         showGithub: true,
         showLink: true,
-    },
-    {
-        id: 1,
-        name: "Legendary Dark",
-        description:
-      "My very own vs code theme. I've been using it for a while now and I'm very happy with it.",
-        technologies: [BiLogoVisualStudio],
-        techNames: ["VS Code"],
-        techLinks: ["https://code.visualstudio.com/"],
-        github: "https://github.com/Llewellyn500/Legendary-Dark",
-        demo: "https://marketplace.visualstudio.com/items?itemName=LlewellynPaintsil.legendary-dark",
-        image: "/projects/legendary-dark.webp",
-        available: true,
-    },
-    {
-        id: 2,
-        name: "Rachel Auto",
-        description: "This is a tool to simplify some tasks done on the Rachel-pi",
-        technologies: [SiGnubash, SiPython],
-        techNames: ["Shell", "Python"],
-        techLinks: [
-            "https://www.gnu.org/software/bash/",
-            "https://www.python.org/",
-        ],
-        github: "https://github.com/ComDevNet/rachel-auto",
-        demo: "",
-        image: "/projects/rachel-auto.webp",
-        available: true,
-        showLink: false,
     },
     {
         id: 3,
