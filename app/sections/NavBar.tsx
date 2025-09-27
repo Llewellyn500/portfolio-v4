@@ -71,7 +71,7 @@ const NavBar = () => {
                     </Link>
 
                     <Link
-                        href="https://llewellyn500.github.io/CV/"
+                        href="https://llewellyn500.github.io/Resume/"
                         data-blobity-magnetic="false"
                         aria-label="Open CV"
                         target="_blank"
