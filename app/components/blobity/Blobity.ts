@@ -55,6 +55,7 @@ export default class Blobity {
   };
   private initialized = false;
   private color: Color | Color[] = { r: 0, g: 0, b: 0 };
+  private dotColor: Color = { r: 0, g: 0, b: 0 };
   private fontColor: Color = { r: 0, g: 0, b: 0 };
   private stickedToElement: HTMLElement | null = null;
   private stickedToElementMutationObserver: MutationObserver;
@@ -215,6 +216,7 @@ export default class Blobity {
     }
 
     if (this.options.dotColor) {
+      this.dotColor = convertColor(this.options.dotColor);
       if (this.globalStyles) {
         document.head.removeChild(this.globalStyles);
 
@@ -224,6 +226,8 @@ export default class Blobity {
       if (!this.globalStyles) {
         this.globalStyles = document.createElement("style");
         this.globalStyles.setAttribute("data-blobity-global-styles", "");
+        this.globalStyles.innerHTML =
+          "body, [data-blobity], a, button, [type='button'], [type='submit'], [type='reset'] { cursor: none !important; }";
         document.head.appendChild(this.globalStyles);
       }
     } else {
@@ -723,7 +727,7 @@ export default class Blobity {
       }
       ctx.lineWidth = 1;
 
-      if ((this.activeFocusedElement || this.activeTooltip) && !activateBlur) {
+      if (!activateBlur) {
         ctx.stroke();
       }
 
@@ -745,6 +749,19 @@ export default class Blobity {
           this.options.tooltipPadding * window.devicePixelRatio -
             ((scale - 100) / 100) * height
         );
+      }
+
+      if (!this.activeTooltip) {
+        ctx.beginPath();
+        ctx.arc(
+          width / 2,
+          height / 2,
+          (this.options.dotSize * window.devicePixelRatio) / 2,
+          0,
+          2 * Math.PI
+        );
+        ctx.fillStyle = `rgb(${this.dotColor.r}, ${this.dotColor.g}, ${this.dotColor.b})`;
+        ctx.fill();
       }
     }
   }
