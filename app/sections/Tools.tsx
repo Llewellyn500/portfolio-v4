@@ -128,7 +128,10 @@ const Tools = () => {
                   target="_blank"
                   aria-label="Tailwind CSS"
                 >
-                  <SiTailwindcss size={50} data-blobity-tooltip={"Tailwind CSS"} />
+                  <SiTailwindcss
+                    size={50}
+                    data-blobity-tooltip={"Tailwind CSS"}
+                  />
                 </Link>
                 <Link
                   href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -166,7 +169,11 @@ const Tools = () => {
                 >
                   <SiAmazonwebservices size={50} data-blobity-tooltip={"AWS"} />
                 </Link>
-                <Link href="https://firebase.google.com/" target="_blank" aria-label="Firebase">
+                <Link
+                  href="https://firebase.google.com/"
+                  target="_blank"
+                  aria-label="Firebase"
+                >
                   <SiFirebase size={50} data-blobity-tooltip={"Firebase"} />
                 </Link>
               </AnimatedTools>
