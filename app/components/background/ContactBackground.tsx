@@ -1,15 +1,23 @@
 import React from "react";
 
 const ContactBackground: React.FC = () => {
-    return (
-        <div className="absolute inset-0">
-            <video className="h-full w-full object-cover" autoPlay={true} loop playsInline={true} muted preload="auto">
-                <source src="/contact-vid.webm" type="video/webm" />
-            </video>
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-bg-dark to-transparent"/>
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-bg-dark to-transparent"/>
-        </div>
-    );
+  return (
+    <div className="absolute inset-0">
+      <video
+        className="h-full w-full object-cover"
+        autoPlay={true}
+        loop
+        playsInline={true}
+        muted
+        preload="auto"
+      >
+        <source src="/contact-vid.webm" type="video/webm" />
+      </video>
+      <div className="absolute inset-0 h-full w-full bg-[#8a2be2] opacity-90 mix-blend-hue" />
+      <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-bg-dark to-transparent" />
+      <div className="absolute inset-0 h-full w-full bg-gradient-to-b from-bg-dark to-transparent" />
+    </div>
+  );
 };
 
 export default ContactBackground;
