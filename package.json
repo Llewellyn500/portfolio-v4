@@ -20,6 +20,7 @@
     "@react-buddy/ide-toolbox-next": "^2.4.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/next": "^9.0.0",
+    "@types/react-dom": "^19.2.3",
     "framer-motion": "^10.6.1",
     "gsap": "^3.11.5",
     "kinet": "^2.2.1",

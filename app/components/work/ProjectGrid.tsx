@@ -29,6 +29,7 @@ const ProjectGrid = () => {
             available={project.available}
             showGithub={project.showGithub}
             showLink={project.showLink}
+            moreDetails={project.moreDetails}
           />
         ))}
       </div>
