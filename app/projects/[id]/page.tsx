@@ -1,14 +1,9 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub } from "react-icons/si";
 import { BsLink45Deg, BsArrowLeft } from "react-icons/bs";
 import { projects } from "../../components/work/projectDetails";
-import { motion } from "framer-motion";
-import AnimatedTitle from "../../animations/AnimatedTitle";
-import AnimatedBody from "../../animations/AnimatedBody";
 
 type Props = {
   params: Promise<{
@@ -16,21 +11,15 @@ type Props = {
   }>;
 };
 
-export default function ProjectDetailsPage({ params }: Props) {
-  // Unwrap params using React.use() for Next.js 15+
-  const { id } = React.use(params);
+export default async function ProjectDetailsPage({ params }: Props) {
+  const { id } = await params;
   const parsedId = parseInt(id);
   const project = projects.find((p) => p.id === parsedId);
-
-  // Scroll to top on mount
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   if (!project) {
     return (
       <div className="flex h-screen items-center justify-center bg-[#0E1016] text-white">
-        <div className="relative z-10 text-center">
+        <div className="text-center">
           <h1 className="mb-4 text-4xl font-bold">Project Not Found</h1>
           <Link
             href="/"
@@ -43,125 +32,152 @@ export default function ProjectDetailsPage({ params }: Props) {
     );
   }
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2, // Delay start until after title animates
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
   return (
-    <div className="min-h-screen bg-[#0E1016] pt-20 text-white">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-        className="relative z-10 px-6 py-10 md:px-12 lg:px-24"
-      >
-        <div className="mx-auto max-w-6xl">
-          {/* Back Button */}
-          <Link
-            href="/"
-            className="mb-10 inline-flex items-center gap-2 text-lg font-semibold text-[#e4ded7] transition-colors hover:text-[#8a2be2]"
-          >
-            <BsArrowLeft size={24} /> Back to Projects
-          </Link>
+    <div className="min-h-screen animate-fade-in bg-[#0E1016] pt-20 text-white">
+      {/* Back Button */}
+      <div className="px-6 pb-6 md:px-12 lg:px-24">
+        <Link
+          href="/#work"
+          className="inline-flex animate-fade-in-up items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white opacity-0 backdrop-blur-md transition-all hover:bg-white/20 md:px-6 md:py-3 md:text-base"
+          style={{ animationDelay: "0.05s", animationFillMode: "forwards" }}
+        >
+          <BsArrowLeft size={20} /> Back to Projects
+        </Link>
+      </div>
 
-          {/* Header */}
-          <div className="mb-12 border-b border-white/10 pb-8 backdrop-blur-sm">
-            <AnimatedTitle
-              text={project.name}
-              className="mb-4 text-4xl font-bold text-white md:text-6xl"
-              wordSpace="mr-[0.25em]"
-              charSpace="-mr-[0.01em]"
+      {/* Main Content */}
+      <div className="px-6 pb-20 md:px-12 lg:px-24">
+        <div className="mx-auto max-w-6xl">
+          {/* Hero Image */}
+          <div
+            className="relative mb-10 h-[300px] w-full animate-fade-in-up overflow-hidden rounded-3xl border border-white/10 opacity-0 md:h-[400px] lg:h-[500px]"
+            style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
+          >
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill
+              className="object-cover"
+              priority
             />
-            <AnimatedBody
-              text={project.description}
-              className="text-xl text-[#95979D]"
-            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0E1016] via-transparent to-transparent" />
           </div>
 
-          {/* Links & Tech */}
-          <motion.div
-            variants={itemVariants}
-            className="mb-12 flex flex-wrap gap-6"
+          {/* Title Section */}
+          <div
+            className="animate-fade-in-up opacity-0"
+            style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
           >
-            {project.available && project.showGithub && project.github && (
-              <Link
-                href={project.github}
-                target="_blank"
-                className="flex items-center gap-2 rounded-full bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur-md transition-all hover:bg-white/20"
-              >
-                <SiGithub size={24} />
-                <span>View Code</span>
-              </Link>
-            )}
-            {project.available && project.showLink && project.demo && (
-              <Link
-                href={project.demo}
-                target="_blank"
-                className="flex items-center gap-2 rounded-full bg-[#8a2be2] px-8 py-4 text-lg font-semibold shadow-lg shadow-[#8a2be2]/30 transition-all hover:bg-[#7a25c7] hover:shadow-[#8a2be2]/50"
-              >
-                <BsLink45Deg size={28} />
-                <span>Live Demo</span>
-              </Link>
-            )}
-          </motion.div>
+            <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+              {project.name}
+            </h1>
+            <p className="mb-8 max-w-3xl text-lg text-[#95979D] md:text-xl">
+              {project.description}
+            </p>
 
-          {/* Content */}
-          <div className="space-y-20">
-            {/* More Details (Screenshots + Descriptions) */}
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-4">
+              {project.available && project.showGithub && project.github && (
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  className="group flex items-center gap-3 rounded-full bg-white/10 px-6 py-3 font-semibold backdrop-blur-md transition-all hover:bg-white/20"
+                >
+                  <SiGithub
+                    size={22}
+                    className="transition-transform group-hover:scale-110"
+                  />
+                  <span>View Code</span>
+                </Link>
+              )}
+              {project.available && project.showLink && project.demo && (
+                <Link
+                  href={project.demo}
+                  target="_blank"
+                  className="group flex items-center gap-3 rounded-full bg-gradient-to-r from-[#8a2be2] to-[#6b21a8] px-6 py-3 font-semibold shadow-lg shadow-[#8a2be2]/25 transition-all hover:shadow-[#8a2be2]/40"
+                >
+                  <BsLink45Deg
+                    size={24}
+                    className="transition-transform group-hover:rotate-12"
+                  />
+                  <span>Live Demo</span>
+                </Link>
+              )}
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div
+            className="my-12 h-px animate-scale-in bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0"
+            style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
+          />
+
+          {/* Project Details */}
+          <div className="space-y-16">
             {project.moreDetails?.map((detail, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={itemVariants}
-                className={`flex flex-col gap-10 md:flex-row md:items-center md:gap-16 ${
-                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`group grid animate-fade-in-up gap-8 opacity-0 md:grid-cols-2 md:items-center md:gap-12`}
+                style={{
+                  animationDelay: `${0.4 + index * 0.15}s`,
+                  animationFillMode: "forwards",
+                }}
               >
-                <div className="flex-1 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-md transition-transform duration-500 hover:scale-[1.02]">
-                  <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+                {/* Image */}
+                <div
+                  className={`overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2 ${
+                    index % 2 !== 0 ? "md:order-2" : ""
+                  }`}
+                >
+                  <div className="relative aspect-video overflow-hidden rounded-xl">
                     <Image
                       src={detail.image}
-                      alt={`${project.name} screenshot ${index + 1}`}
+                      alt={`${project.name} - ${index + 1}`}
                       fill
-                      className="object-cover"
-                      priority={index === 0}
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </div>
-                <div className="flex-1">
-                  <p className="text-xl leading-relaxed text-[#e4ded7]/90">
+
+                {/* Description */}
+                <div className={index % 2 !== 0 ? "md:order-1" : ""}>
+                  <p className="text-lg leading-relaxed text-[#e4ded7]/90 md:text-xl">
                     {detail.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
 
             {(!project.moreDetails || project.moreDetails.length === 0) && (
-              <motion.div
-                variants={itemVariants}
-                className="rounded-2xl border border-dashed border-white/10 py-16 text-center text-xl text-white/50 backdrop-blur-sm"
+              <div
+                className="animate-fade-in-up rounded-2xl border border-dashed border-white/20 py-16 text-center opacity-0"
+                style={{
+                  animationDelay: "0.4s",
+                  animationFillMode: "forwards",
+                }}
               >
-                No additional details available for this project yet.
-              </motion.div>
+                <p className="text-xl text-white/50">
+                  No additional details available for this project yet.
+                </p>
+              </div>
             )}
           </div>
+
+          {/* Navigation Footer */}
+          <div
+            className="mt-20 flex animate-fade-in-up justify-center opacity-0"
+            style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
+          >
+            <Link
+              href="/#work"
+              className="group flex items-center gap-2 text-lg font-semibold text-[#e4ded7] transition-colors hover:text-[#8a2be2]"
+            >
+              <BsArrowLeft className="transition-transform group-hover:-translate-x-1" />
+              <span>Back to All Projects</span>
+            </Link>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

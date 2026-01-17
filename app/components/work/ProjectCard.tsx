@@ -23,7 +23,12 @@ const ProjectCard = ({
   showGithub = true, // Default to true if not explicitly provided
   showLink = true, // Default to true if not explicitly provided
   moreDetails,
-}: ProjectProps & { showGithub?: boolean; showLink?: boolean }) => {
+  onShowDetails,
+}: ProjectProps & {
+  showGithub?: boolean;
+  showLink?: boolean;
+  onShowDetails?: () => void;
+}) => {
   return (
     <motion.div
       className={`relative z-10 h-[550px] w-full items-stretch justify-center bg-cover bg-center bg-no-repeat py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[500px]`}
@@ -111,13 +116,13 @@ const ProjectCard = ({
             }
           />
 
-          <Link
-            href={`/projects/${id}`}
+          <button
+            onClick={onShowDetails}
             className="mt-6 inline-block text-[16px] font-bold text-[#e4ded7] underline decoration-[#8a2be2] transition-colors hover:text-[#8a2be2]"
             data-blobity-magnetic="false"
           >
             Show more details
-          </Link>
+          </button>
 
           <div className="mb-9 mt-9 grid grid-cols-5 gap-5">
             {technologies.map((IconComponent, id) => (
