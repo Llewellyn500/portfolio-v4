@@ -51,7 +51,16 @@ export default function ProjectModal({
   return (
     <>
       {/* Backdrop */}
-      <div className="fixed inset-0 z-[100] bg-black/90" onClick={onClose} />
+      <div
+        className="fixed inset-0 z-[100] bg-black/90"
+        onClick={onClose}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") onClose();
+        }}
+        aria-label="Close modal"
+      />
 
       {/* Modal */}
       <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 md:p-8">
