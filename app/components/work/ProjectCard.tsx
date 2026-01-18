@@ -31,7 +31,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div
-      className={`relative z-10 h-[600px] w-full items-stretch justify-center bg-cover bg-center bg-no-repeat py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[600px]`}
+      className={`relative z-10 h-[600px] w-full items-stretch justify-center bg-cover bg-center bg-no-repeat py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[650px]`}
       initial="initial"
       animate="animate"
     >
