@@ -124,6 +124,7 @@ export const projects: ProjectProps[] = [
     imageFull: "/projects/asem-bi/asem-bi-full.webp",
     available: true,
     showLink: true,
+    showGithub: false,
     moreDetails: [
       {
         description:
@@ -145,6 +146,8 @@ export const projects: ProjectProps[] = [
     image: "/projects/legendary-dark/legendary-dark.webp",
     imageFull: "/projects/legendary-dark/legendary-dark-full.jpg",
     available: true,
+    showLink: true,
+    showGithub: true,
     moreDetails: [
       {
         description:
@@ -171,6 +174,8 @@ export const projects: ProjectProps[] = [
     image: "/projects/lap-docs/lap-docs.webp",
     imageFull: "/projects/lap-docs/lap-docs-full.webp",
     available: true,
+    showLink: true,
+    showGithub: true,
     moreDetails: [
       {
         description:
@@ -197,10 +202,11 @@ export const projects: ProjectProps[] = [
     image: "/projects/lap-cms/lap-cms.webp",
     imageFull: "/projects/lap-cms/lap-cms-full.webp",
     available: true,
+    showLink: false,
+    showGithub: true,
     moreDetails: [
       {
-        description:
-          "",
+        description: "This is the admin panel for the lap docs website. It directly communicates with the database and updates the website in real time. Also only people that are allowed can log in with their accounts.",
         image: "/projects/lap-cms/lap-cms-full.webp",
       },
     ],
@@ -210,7 +216,13 @@ export const projects: ProjectProps[] = [
     name: "OC4D",
     description:
       "A collection of resources tailored to help students in the rural areas of Ghana",
-    technologies: [SiNextdotjs, SiTypescript, SiNodedotjs, SiTailwindcss, FaAws],
+    technologies: [
+      SiNextdotjs,
+      SiTypescript,
+      SiNodedotjs,
+      SiTailwindcss,
+      FaAws,
+    ],
     techNames: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "AWS"],
     techLinks: [
       "https://nextjs.org/",
@@ -224,10 +236,11 @@ export const projects: ProjectProps[] = [
     image: "/projects/oc4d/oc4d.webp",
     imageFull: "/projects/oc4d/oc4d-full.webp",
     available: true,
+    showLink: true,
+    showGithub: false,
     moreDetails: [
       {
-        description:
-          "",
+        description: `Open Content for Development (OC4D) is an online portal and database designed to provide free, accessible educational resources (Open Educational Resources or OER) to people in developing nations. Its primary mission is to bridge the "digital divide" by offering critical information to rural communities, specifically targeting individuals with lower literacy levels or limited internet access.`,
         image: "/projects/oc4d/oc4d-full.webp",
       },
     ],
