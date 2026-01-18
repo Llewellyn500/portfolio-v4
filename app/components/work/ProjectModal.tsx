@@ -67,7 +67,7 @@ export default function ProjectModal({
           {/* Hero Image */}
           <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-xl bg-gray-800">
             <Image
-              src={project.image}
+              src={project.imageFull || project.image}
               alt={project.name}
               fill
               className="object-cover"
@@ -111,7 +111,7 @@ export default function ProjectModal({
           <div className="my-6 h-px bg-white/10" />
 
           {/* Project Details */}
-          <div className="space-y-8 pb-6">
+          <div className="space-y-8 pb-16">
             {project.moreDetails?.map((detail, index) => (
               <div key={index} className="grid gap-6 md:grid-cols-2 md:gap-8">
                 {/* Image */}

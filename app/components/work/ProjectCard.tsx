@@ -31,7 +31,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div
-      className={`relative z-10 h-[550px] w-full items-stretch justify-center bg-cover bg-center bg-no-repeat py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[500px]`}
+      className={`relative z-10 h-[600px] w-full items-stretch justify-center bg-cover bg-center bg-no-repeat py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[600px]`}
       initial="initial"
       animate="animate"
     >
@@ -51,7 +51,7 @@ const ProjectCard = ({
           alt={name}
           width={500}
           height={500}
-          className={`absolute -bottom-2 w-[95%] sm:w-[95%] md:w-[75%] lg:max-w-[64%] ${
+          className={`absolute -bottom-2 w-[85%] sm:w-[95%] md:w-[75%] lg:max-w-[64%] ${
             id % 2 === 0 ? "right-0" : "left-0"
           }`}
           priority={true}
@@ -97,14 +97,14 @@ const ProjectCard = ({
         <div
           className={`absolute text-white ${
             !(id % 2 === 0)
-              ? "right-0 top-32 ml-10 mr-0 md:right-0 md:ml-0 lg:right-0 lg:top-60 lg:mr-4"
-              : "left-10 top-32 ml-0 md:mr-12 lg:top-52 lg:ml-4"
+              ? "right-0 top-24 ml-10 mr-0 sm:top-32 md:right-0 md:ml-0 lg:right-0 lg:top-60 lg:mr-4"
+              : "left-10 top-24 ml-0 sm:top-32 md:mr-12 lg:top-52 lg:ml-4"
           } mb-10 md:mb-16 lg:mb-14`}
         >
           <AnimatedTitle
             text={name}
             className={
-              "max-w-[90%] text-[40px] leading-none text-white md:text-[44px] md:leading-none lg:max-w-[450px] lg:text-[48px] lg:leading-none"
+              "max-w-[90%] break-words text-[35px] leading-none text-white sm:text-[40px] md:text-[44px] md:leading-none lg:max-w-[500px] lg:text-[48px] lg:leading-none"
             }
             wordSpace={"mr-[0.25em]"}
             charSpace={"-mr-[0.01em]"}
@@ -116,15 +116,7 @@ const ProjectCard = ({
             }
           />
 
-          <button
-            onClick={onShowDetails}
-            className="mt-6 inline-block text-[16px] font-bold text-[#e4ded7] underline decoration-[#8a2be2] transition-colors hover:text-[#8a2be2]"
-            data-blobity-magnetic="false"
-          >
-            Show more details
-          </button>
-
-          <div className="mb-9 mt-9 grid grid-cols-5 gap-5">
+          <div className="mb-4 mt-4 grid grid-cols-5 gap-5 sm:mb-6 sm:mt-6">
             {technologies.map((IconComponent, id) => (
               <div key={id} className={"relative"}>
                 <Link
@@ -141,6 +133,29 @@ const ProjectCard = ({
               </div>
             ))}
           </div>
+
+          {available && (
+            <button
+              onClick={onShowDetails}
+              className="group mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#8a2be2] to-[#6b21a8] px-6 py-3 text-[15px] font-bold text-white shadow-lg shadow-[#8a2be2]/30 transition-all hover:scale-105 hover:shadow-[#8a2be2]/50 sm:mt-6"
+              data-blobity-magnetic="false"
+            >
+              <span>Show more details</span>
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          )}
         </div>
       </Container>
     </motion.div>
