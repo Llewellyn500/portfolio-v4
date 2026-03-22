@@ -3,6 +3,12 @@ import React, { ReactNode } from "react";
 import { Metadata } from "next";
 import { Syne } from "next/font/google";
 import Head from "next/head";
+import Script from "next/script";
+
+const siteUrl = "https://llewellyn.is-a.dev/";
+const siteName = "Llewellyn Paintsil";
+const siteDescription =
+  "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -11,12 +17,14 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://llewellyn.is-a.dev/"),
-  title: "Llewellyn Paintsil",
-  description:
-    "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
+  metadataBase: new URL(siteUrl),
+  title: siteName,
+  description: siteDescription,
   generator: "Next.js",
-  applicationName: "Llewellyn's Portfolio",
+  applicationName: siteName,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Llewellyn Adonteng Paintsil",
     "Sleek style",
@@ -46,17 +54,16 @@ export const metadata: Metadata = {
     "frontend engineer portfolio",
   ],
   openGraph: {
-    title: "Llewellyn Paintsil - Designer, Developer and Content Creator",
-    description:
-      "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
-    url: "https://llewellyn.is-a.dev/",
-    siteName: "Llewellyn Paintsil",
+    title: `${siteName} - Designer, Developer and Content Creator`,
+    description: siteDescription,
+    url: siteUrl,
+    siteName,
     images: [
       {
         url: "/metadata.jpg",
         width: 1200,
         height: 630,
-        alt: "Llewellyn Paintsil - Designer, Developer and Content Creator",
+        alt: `${siteName} - Designer, Developer and Content Creator`,
       },
     ],
     locale: "en-US",
@@ -64,10 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Llewellyn Paintsil - Designer, Developer and Content Creator",
-    description:
-      "Hobby Designer, Software Developer and YouTube Content Creator, currently working for Community Development Network (CDN). Focused on improving current technology for education in rural areas, studying in KNUST (Kwame Nkrumah University of Science and Technology), Ghana.",
-    creator: "Llewellyn Paintsil",
+    title: `${siteName} - Designer, Developer and Content Creator`,
+    description: siteDescription,
+    creator: siteName,
     images: ["/metadata.jpg"],
   },
   robots: {
@@ -76,14 +82,29 @@ export const metadata: Metadata = {
     nocache: false,
     googleBot: {
       index: true,
-      follow: false,
-      noimageindex: true,
+      follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
   },
   category: "technology",
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}#website`,
+  name: siteName,
+  alternateName: [
+    "Llewellyn Adonteng Paintsil",
+    "Llewellyn's Portfolio",
+    "llewellyn.is-a.dev",
+  ],
+  url: siteUrl,
+  description: siteDescription,
+  inLanguage: "en-US",
 };
 
 type RootLayoutProps = {
@@ -168,23 +189,29 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#141413" />
 
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-03MX5ZPMJ6"
-        ></script>
-        <script>
-          {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', 'G-03MX5ZPMJ6');
-                    `}
-        </script>
       </Head>
       <body
         className={`${syne.className} scroll-smooth scrollbar-none scrollbar-track-[#0E1016] scrollbar-thumb-[#8a2be2]`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-03MX5ZPMJ6"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-03MX5ZPMJ6');
+          `}
+        </Script>
         {children}
       </body>
     </html>

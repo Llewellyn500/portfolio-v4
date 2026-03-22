@@ -53,17 +53,6 @@ export default function Home() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Llewellyn Paintsil",
-            url: "https://llewellyn.is-a.dev/",
-          }),
-        }}
-      />
       <PreLoader />
       <Blur />
       <Color />

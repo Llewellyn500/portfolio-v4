@@ -1,5 +1,10 @@
 {
- "name": "App",
+ "name": "Llewellyn Paintsil",
+ "short_name": "Llewellyn",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#141413",
+ "theme_color": "#141413",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

@@ -18,6 +18,14 @@ const Hero = () => {
           className={`relative flex flex-col items-center justify-center ${spaceGrotesk.className} pointer-events-none`}
         >
           <Logo width={100} height={100} />
+          <div className="mt-6 text-center text-[#e4ded7]">
+            <h1 className="text-3xl font-bold uppercase tracking-[0.35em] sm:text-4xl">
+              Llewellyn Paintsil
+            </h1>
+            <p className="mt-3 text-xs uppercase tracking-[0.45em] text-[#b8b1aa] sm:text-sm">
+              Designer, Developer and Content Creator
+            </p>
+          </div>
         </div>
       </div>
     </motion.section>
