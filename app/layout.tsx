@@ -3,7 +3,8 @@ import React, { ReactNode } from "react";
 import { Metadata } from "next";
 import { Syne } from "next/font/google";
 import Head from "next/head";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { GaRouteTracker } from "./components/GaRouteTracker";
 
 const siteUrl = "https://llewellyn.is-a.dev/";
 const siteName = "Llewellyn Paintsil";
@@ -111,6 +112,9 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
+const gaMeasurementId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "G-03MX5ZPMJ6";
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
@@ -199,19 +203,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             __html: JSON.stringify(websiteJsonLd),
           }}
         />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-03MX5ZPMJ6"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-03MX5ZPMJ6');
-          `}
-        </Script>
+        <GoogleAnalytics gaId={gaMeasurementId} />
+        <GaRouteTracker gaId={gaMeasurementId} />
         {children}
       </body>
     </html>
