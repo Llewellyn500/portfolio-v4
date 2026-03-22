@@ -1,4 +1,5 @@
 import {
+  SiFigma,
   SiFirebase,
   SiGnubash,
   SiNextdotjs,
@@ -28,6 +29,12 @@ export type ProjectProps = {
     description: string;
     image: string;
   }[];
+  /** Shown on design cards below the description */
+  date?: string;
+  /**
+   * Extra images for the design gallery (carousel). The card `image` is always the first slide.
+   */
+  designGallery?: string[];
 };
 
 export const projects: ProjectProps[] = [
@@ -44,7 +51,7 @@ export const projects: ProjectProps[] = [
       "https://tailwindcss.com/",
     ],
     github: "",
-    demo: "https://predict-mediwhisper.vercel.app/",
+    demo: "https://mediwhisper.com/",
     image: "/projects/predict-mediwhisper/predict-mediwhisper.webp",
     imageFull: "/projects/predict-mediwhisper/predict-mediwhisper-full.webp",
     available: true,
@@ -80,7 +87,7 @@ export const projects: ProjectProps[] = [
       "https://tailwindcss.com/",
     ],
     github: "",
-    demo: "https://professional-mediwhisper.vercel.app/",
+    demo: "https://prof.mediwhisper.com",
     image: "/projects/professional-mediwhisper/professional-mediwhisper.webp",
     imageFull:
       "/projects/professional-mediwhisper/professional-mediwhisper-full.webp",
@@ -119,7 +126,7 @@ export const projects: ProjectProps[] = [
       "https://tailwindcss.com/",
     ],
     github: "",
-    demo: "https://asem-bi.vercel.app/",
+    demo: "https://asembi.page",
     image: "/projects/asem-bi/asem-bi.webp",
     imageFull: "/projects/asem-bi/asem-bi-full.webp",
     available: true,
@@ -128,8 +135,13 @@ export const projects: ProjectProps[] = [
     moreDetails: [
       {
         description:
-          "This websiote is a platform that allows users to create letters with a variety of templates. Once the letter is created, users can generate a QR code that can be shared with the recipient. The recipient can then scan the QR code to view the letter. I created this site to share a letter to the girl I love and family.",
+          "This website is a platform that allows users to create letters with a variety of templates. Once the letter is created, users can generate a QR code that can be shared with the recipient. The recipient can then scan the QR code to view the letter. I created this site to share a letter to the girl I love and family.",
         image: "/projects/asem-bi/asem-bi-01.webp",
+      },
+      {
+        description:
+          "This is the first site I created that integrates Cloudflare and a password less sign in and sign up system making it easier for users to access the site.",
+        image: "/projects/asem-bi/asem-bi-02.webp",
       },
     ],
   },
@@ -206,7 +218,8 @@ export const projects: ProjectProps[] = [
     showGithub: true,
     moreDetails: [
       {
-        description: "This is the admin panel for the lap docs website. It directly communicates with the database and updates the website in real time. Also only people that are allowed can log in with their accounts.",
+        description:
+          "This is the admin panel for the lap docs website. It directly communicates with the database and updates the website in real time. Also only people that are allowed can log in with their accounts.",
         image: "/projects/lap-cms/lap-cms-full.webp",
       },
     ],
@@ -257,5 +270,42 @@ export const projects: ProjectProps[] = [
     demo: "",
     image: "/projects/construction-2.webp",
     available: false,
+  },
+];
+
+/** Visual / product design pieces — same card layout as projects, without live links or modals. */
+export const designs: ProjectProps[] = [
+  {
+    id: 0,
+    name: "Connect & Collect",
+    description:
+      "A flyer design for a friend's business where they sell different types of laptops and when you refer a friend you get a commission on the sale.",
+    technologies: [],
+    techNames: [],
+    techLinks: [],
+    github: "",
+    demo: "",
+    image: "/designs/connect-and-collect.webp",
+    available: false,
+    showLink: false,
+    showGithub: false,
+    date: "February 2026",
+  },
+  {
+    id: 1,
+    name: "Easy Steps",
+    description:
+      "A flyer design for my friend's woman. It's a simple design that basically has the contacts of the seller on it.",
+    technologies: [],
+    techNames: [],
+    techLinks: [],
+    github: "",
+    demo: "",
+    image: "/designs/easy-steps.webp",
+    available: false,
+    showLink: false,
+    showGithub: false,
+    date: "March 2026",
+    // designGallery: ["/projects/legendary-dark/legendary-dark-full.jpg"],
   },
 ];

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
+import { useAnimation, motion, type AnimationControls } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedTitleProps = {
@@ -8,6 +8,11 @@ type AnimatedTitleProps = {
   wordSpace: string;
   charSpace: string;
   delay?: number;
+  /**
+   * When true, skip scroll intersection (unreliable inside overflow-hidden cards / tab swaps)
+   * and play the reveal as soon as the component mounts.
+   */
+  playImmediately?: boolean;
 };
 
 export default function AnimatedTitle({
@@ -15,22 +20,30 @@ export default function AnimatedTitle({
   className,
   wordSpace,
   charSpace,
+  playImmediately = false,
 }: AnimatedTitleProps) {
   const ctrls = useAnimation();
 
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0,
     triggerOnce: true,
+    skip: playImmediately,
   });
 
   useEffect(() => {
+    if (playImmediately) return;
     if (inView) {
-      ctrls.start("visible");
+      void ctrls.start("visible");
+    } else {
+      void ctrls.start("hidden");
     }
-    if (!inView) {
-      ctrls.start("hidden");
-    }
-  }, [ctrls, inView]);
+  }, [ctrls, inView, playImmediately]);
+
+  // Imperative ctrls.start("visible") can run before motion nodes subscribe; use a
+  // declarative target for cards (playImmediately) so the reveal always runs on mount.
+  const animateTarget: "visible" | AnimationControls = playImmediately
+    ? "visible"
+    : ctrls;
 
   const wordAnimation = {
     hidden: {},
@@ -60,7 +73,7 @@ export default function AnimatedTitle({
             aria-hidden="true"
             key={index}
             initial="hidden"
-            animate={ctrls}
+            animate={animateTarget}
             variants={wordAnimation}
             transition={{
               delayChildren: index * 0.25,
