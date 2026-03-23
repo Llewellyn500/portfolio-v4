@@ -325,4 +325,21 @@ export const designs: ProjectProps[] = [
     date: "September 2022",
     designGallery: ["/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-2.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-3.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-4.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-5.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-6.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-7.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-8.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-9.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-10.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-11.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-12.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-13.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-14.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-15.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-16.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-17.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-18.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-19.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-20.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-21.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-22.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-23.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-24.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-25.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-26.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-27.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-28.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-29.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-30.webp"],
   },
+  {
+    id: 3,
+    name: "Oak + UI",
+    description:
+      "An entire app UI design and logo design, I don't remember what it was about but I remember it was one of my first UI mobile design",
+    technologies: [],
+    techNames: [],
+    techLinks: [],
+    github: "",
+    demo: "",
+    image: "/designs/oak-plus/oak-plus-1.webp",
+    available: false,
+    showLink: false,
+    showGithub: false,
+    date: "May 2021",
+    designGallery: ["/designs/oak-plus/oak-plus-2.webp", "/designs/oak-plus/oak-plus-3.webp", "/designs/oak-plus/oak-plus-4.webp", "/designs/oak-plus/oak-plus-5.webp", "/designs/oak-plus/oak-plus-6.webp", "/designs/oak-plus/oak-plus-7.webp", "/designs/oak-plus/oak-plus-8.webp", "/designs/oak-plus/oak-plus-9.webp", "/designs/oak-plus/copy.xd.svg"],
+  },
 ];
