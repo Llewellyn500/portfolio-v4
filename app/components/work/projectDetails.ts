@@ -308,4 +308,21 @@ export const designs: ProjectProps[] = [
     date: "March 2026",
     // designGallery: ["/projects/legendary-dark/legendary-dark-full.jpg"],
   },
+  {
+    id: 2,
+    name: "Childhood Cancer Nuggets 2022",
+    description:
+      "Daily Nuggets design telling you a bit about childhood cancer in the month of september, each day with a new nugget.",
+    technologies: [],
+    techNames: [],
+    techLinks: [],
+    github: "",
+    demo: "",
+    image: "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-1.webp",
+    available: false,
+    showLink: false,
+    showGithub: false,
+    date: "September 2022",
+    designGallery: ["/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-2.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-3.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-4.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-5.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-6.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-7.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-8.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-9.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-10.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-11.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-12.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-13.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-14.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-15.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-16.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-17.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-18.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-19.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-20.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-21.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-22.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-23.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-24.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-25.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-26.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-27.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-28.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-29.webp", "/designs/childhood-cancer-nuggest-2022/childhood-cancer-nuggets-day-30.webp"],
+  },
 ];
