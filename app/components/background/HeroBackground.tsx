@@ -12,6 +12,7 @@ const HeroBackground: React.FC = () => {
         preload="auto"
       >
         <source src="/hero-vid.webm" type="video/webm" />
+        <source src="/hero-vid.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 h-full w-full bg-[#8a2be2] opacity-90 mix-blend-hue" />
       <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-bg-dark to-transparent" />

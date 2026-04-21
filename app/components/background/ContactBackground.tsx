@@ -12,6 +12,7 @@ const ContactBackground: React.FC = () => {
         preload="auto"
       >
         <source src="/contact-vid.webm" type="video/webm" />
+        <source src="/contact-vid.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 h-full w-full bg-[#8a2be2] opacity-90 mix-blend-hue" />
       <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-bg-dark to-transparent" />
