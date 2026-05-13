@@ -2,6 +2,7 @@ import {
   SiFigma,
   SiFirebase,
   SiGnubash,
+  SiJavascript,
   SiNextdotjs,
   SiNodedotjs,
   SiPython,
@@ -260,6 +261,32 @@ export const projects: ProjectProps[] = [
   },
   {
     id: 7,
+    name: "Tether",
+    description:
+      "Obsidian community plugin that syncs your vault with Google Drive using your own Google Cloud OAuth credentials—full vault, directional pull/push, and mobile-friendly requests.",
+    technologies: [SiTypescript, SiJavascript],
+    techNames: ["TypeScript", "JavaScript"],
+    techLinks: [
+      "https://www.typescriptlang.org/",
+      "https://developer.mozilla.org/docs/Web/JavaScript",
+    ],
+    github: "https://github.com/llewellyn500/obsidian-tether",
+    demo: "https://obsidian.md/plugins/tether",
+    image: "/projects/tether/tether.webp",
+    imageFull: "/projects/tether/tether-full.png",
+    available: true,
+    showLink: true,
+    showGithub: true,
+    moreDetails: [
+      {
+        description:
+          "Tether is listed in Obsidian Community Plugins so people can install it from Settings → Community plugins. It keeps notes, attachments, nested folders, and the .obsidian folder in sync while you control your own Google Cloud project—no shared backend credentials.",
+        image: "/projects/tether/tether-full.png",
+      },
+    ],
+  },
+  {
+    id: 8,
     name: "Coming Soon",
     description:
       "I've got some couple of projects i'm currently working on. I'll update this section as soon as I'm done.",
@@ -268,7 +295,7 @@ export const projects: ProjectProps[] = [
     techLinks: [],
     github: "",
     demo: "",
-    image: "/projects/construction-2.webp",
+    image: "/projects/construction.webp",
     available: false,
   },
 ];
