@@ -301,7 +301,7 @@ export const projects: ProjectProps[] = [
     github: "https://github.com/Llewellyn500/addy",
     demo: "",
     image: "/projects/addy/addy.webp",
-    imageFull: "/projects/addy/screenshot.png",
+    imageFull: "/projects/addy/logo.png",
     available: true,
     showLink: false,
     showGithub: true,
@@ -309,11 +309,6 @@ export const projects: ProjectProps[] = [
       {
         description:
           "Addy is an ultra-lightweight system tray utility designed to give you quick, one-click access to your local IP addresses and active network connections. Written in Python, it runs natively on Windows, macOS, and Linux.",
-        image: "/projects/addy/screenshot.png",
-      },
-      {
-        description:
-          "With zero idle footprint, Addy consumes close to 0% CPU and minimal RAM, making it perfect to keep running constantly in the background. It automatically detects and displays network names and adapter types (e.g. WiFi SSIDs) instead of generic interface names.",
         image: "/projects/addy/screenshot.png",
       },
     ],
