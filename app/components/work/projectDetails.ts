@@ -271,7 +271,7 @@ export const projects: ProjectProps[] = [
       "https://developer.mozilla.org/docs/Web/JavaScript",
     ],
     github: "https://github.com/llewellyn500/obsidian-tether",
-    demo: "https://obsidian.md/plugins/tether",
+    demo: "https://community.obsidian.md/plugins/tether",
     image: "/projects/tether/tether.webp",
     imageFull: "/projects/tether/tether-full.png",
     available: true,
