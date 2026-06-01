@@ -10,7 +10,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaWindows, FaApple, FaLinux } from "react-icons/fa";
 
 export type ProjectProps = {
   imageFull?: string;
@@ -287,6 +287,39 @@ export const projects: ProjectProps[] = [
   },
   {
     id: 8,
+    name: "Addy",
+    description:
+      "A beautiful, ultra-lightweight cross-platform system tray utility that displays local network interface names, connection details, and IP addresses with instant, one-click clipboard copying.",
+    technologies: [SiPython, FaWindows, FaApple, FaLinux],
+    techNames: ["Python", "Windows", "macOS", "Linux"],
+    techLinks: [
+      "https://www.python.org/",
+      "https://www.microsoft.com/windows",
+      "https://www.apple.com/macos",
+      "https://www.kernel.org/",
+    ],
+    github: "https://github.com/Llewellyn500/addy",
+    demo: "",
+    image: "/projects/addy/addy.webp",
+    imageFull: "/projects/addy/screenshot.png",
+    available: true,
+    showLink: false,
+    showGithub: true,
+    moreDetails: [
+      {
+        description:
+          "Addy is an ultra-lightweight system tray utility designed to give you quick, one-click access to your local IP addresses and active network connections. Written in Python, it runs natively on Windows, macOS, and Linux.",
+        image: "/projects/addy/screenshot.png",
+      },
+      {
+        description:
+          "With zero idle footprint, Addy consumes close to 0% CPU and minimal RAM, making it perfect to keep running constantly in the background. It automatically detects and displays network names and adapter types (e.g. WiFi SSIDs) instead of generic interface names.",
+        image: "/projects/addy/screenshot.png",
+      },
+    ],
+  },
+  {
+    id: 9,
     name: "Coming Soon",
     description:
       "I've got some couple of projects i'm currently working on. I'll update this section as soon as I'm done.",
@@ -295,7 +328,7 @@ export const projects: ProjectProps[] = [
     techLinks: [],
     github: "",
     demo: "",
-    image: "/projects/construction.webp",
+    image: "/projects/construction-2.webp",
     available: false,
   },
 ];
